@@ -1,5 +1,5 @@
-Email.EmailController = Ember.Controller.extend({
-  isBodyShowing = false,
+Email.EmailsController = Ember.Controller.extend({
+  isBodyShowing: false,
   actions: {
     showBody: function() {
       this.set('isBodyShowing', true);
