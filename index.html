@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Email</title>
-    
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/bootstrap.css">
 
     <script src="libs/jquery-1.11.1.js"></script>
     <script src="libs/ember-template-compiler-1.10.0.js"></script>
@@ -13,10 +13,19 @@
     <script src="libs/localstorage-adapter-0.5.1.js"></script>
 
     <script src="email.js"></script>
+    <script src="router.js"></script>
+    <script src="store.js"></script>
+
+    <script src="routes/emails.js"></script>
+
+    <script src="models/email.js"></script>
+
+    <script src="controllers/new-email.js"></script>
+    <script src="controllers/emails.js"></script>
 
     <script>
       EmberHandlebarsLoader.loadTemplates([
-        'application'
+        'application', 'emails', 'new-email'
       ]);
     </script>
 

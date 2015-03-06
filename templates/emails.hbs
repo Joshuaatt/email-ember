@@ -1,0 +1,20 @@
+<h2>Your emails</h2>
+
+<ul>
+  {{#each email in model}}
+    <li>
+      <strong>From:</strong> {{email.sender}} <strong>Subject:</strong> {{email.subject}}<br>
+
+      {{#if isBodyShowing}}
+        <button class="btn btn-info" {{action 'hideBody'}}>Hide body</button>
+        <p>
+          <strong>Body:</strong> {{email.body}}
+        </p>
+      {{else}}
+        <button class="btn btn-info" {{action 'showBody'}}>Show body</button>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'new-email' classNames="btn btn-primary"}}Compose{{/link-to}}
